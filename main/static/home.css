@@ -1,0 +1,219 @@
+
+
+/* Why Torbah Section */
+.why-torbah {
+  text-align: center;
+  font-size: 30px;
+  margin: 19px 
+}
+
+.why-torbah__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.why-torbah__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.why-torbah__item {
+  width: calc(23% - 30px); /* Slightly adjust card width for better layout */
+  text-align: center;
+  margin-bottom: 50px; /* Increased spacing between cards */
+  background-color: #fff;
+  border: none; /* Remove default border, rely on box-shadow */
+  border-radius: 20px; /* Add rounded corners for a softer look */
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Subtle box-shadow for depth */
+  transition: all 0.3s ease-in-out;
+  
+}
+
+.why-torbah__item:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Enhance box-shadow on hover */
+  transform: translateY(-3px); /* Slight upward movement on hover */
+}
+
+.why-torbah__item i {
+  font-size: 40px; /* Increase icon size for prominence */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.why-torbah__item h3 {
+  font-size: 22px; /* Increase heading size for readability */
+  font-weight: bold;
+  color: #222; /* Darker text color for contrast */
+  margin-bottom: 15px;
+}
+
+.why-torbah__item p {
+  line-height: 1.6;
+  color: #666; /* Lighter text color for better readability */
+}
+
+/* Font Awesome Icons (You might need to include Font Awesome CSS) */
+.fa {
+  padding: 0 5px;
+}
+
+.hero-section {
+  position: relative; /* Allows positioning content over the image */
+  width: 100%;
+  height: calc(100vh - navbar-height);  /* Adjust height based on navbar height */
+  background-color: #f0f0f0; /* Optional background color */
+}
+
+.hero-image {
+  width: 200px; /* Fills the container width */
+  height: 200px; /* Fills the container height */
+  object-fit: cover;
+  margin: 0 auto; /* Centers the image horizontally */
+  border-radius: 10px;
+}
+
+
+.hero-content {
+  position: absolute; /* Positions content over the image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers content horizontally and vertically */
+  text-align: center; /* Centers text within the content area */
+  color: white;  /* Optional text color */
+}
+
+.hero-button {
+  background-color: #4CAF50; /* Optional button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hero-image {
+  filter: brightness(0.4); /* Reduces image opacity to 70% */
+}
+
+/* Why Torbah Section remains unchanged */
+
+
+
+.intro-content {  /* New styles for the content wrapper */
+  width: 50%;  /* Set width to half for image and text side-by-side */
+  position: relative; /* Enable relative positioning for image stacking */
+}
+
+.intro-section {
+  display: flex; /* Make the intro section a flexbox for positioning */
+}
+.intro-title {
+  font-size: 40px;
+  padding-bottom: 20px;
+  
+}
+.intro-image {
+  width: 50%; /* Set the image width to half of the container */
+}
+
+.intro-text {
+  width: 45%; /* Set the text width to 45% to leave space for margins */
+  padding: 50px 120px; /* Make the intro section a flexbox for positioning */
+
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-family: "Poppins", sans-serif; /* Assuming you're using Poppins font */
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+.container .card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card .content{
+  position: absolute;
+  bottom: -160px;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  flex-direction: column;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: bottom 0.5s;
+  transition-delay: 0.8s;
+}
+.container .card:hover .content{
+  bottom: 0px;
+  transition-delay: 0s;
+}
+.container .card .content .contentBx h3{
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.1em;
+  text-align: center;
+  margin: 5px 0 15px;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition-delay: 0.6s;
+}
+.container .card:hover .content .contentBx h3{
+  opacity: 1;
+  transform: translateY(0px);
+}
+.container .card .content .contentBx h3 span{
+  font-size: 9px;
+  font-weight: 300;
+  text-transform: initial;
+}
+.container .card .content .sci{
+  position: relative;
+  bottom: 10px;
+  display: flex;
+}
+.container .card .content .sci li{
+  list-style: none;
+  margin:  10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.2s * var(--i));
+}
+.container .card:hover .content .sci li{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.container .card .content .sci li a{
+  color: #fff;
+}
