@@ -1,0 +1,33 @@
+{% extends "main/base.html" %}
+
+{% block title %}About{% endblock %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'base.css' %}">
+<link rel="stylesheet" href="{% static 'about.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>الاسئلة الاكثر شيوعا</h1>
+    <details>
+    <summary>ما هي تٌربة؟</summary>
+    <div>
+   تٌربةهي منظومة ري متكاملة، تهدف الى جعل عملية الري تلفائية بواسطة انظمة حديثة (انترنت الاشياء)
+    </div>
+  </details>
+  <details>
+    <summary>ما هي عوائد استخدام النظام؟</summary>
+    <div>
+   نحرص في تٌربة على جعل النظام ذكي كفاية ليقوم بالري بالكمية التي يحتاجها النبات، مما يؤدي الى تقليل صرف المياه وتقليل الضرر للنبات
+    </div>
+  </details>
+  <details>
+    <summary>كيف اتأكد من انه تم ري النبات الخاص بي؟</summary>
+    <div>
+   نوفر لك شاشة متابعة ذكية لمراقبة المزرعة في اي وقت
+    </div>
+  </details>
+  </div>
+  
+{% endblock %}
+
