@@ -12,24 +12,27 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-import environ
+from dotenv import load_dotenv
 
-env = environ.Env()
-environ.Env.read_env()
+# Load environment variables from .env file
+load_dotenv()
 
+DATABASE_URL = os.environ.get('DATABASE_URL')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-f+6prd*q=e05(b%_$fdd&lp!=ib6!zo*)&)r-g0p=fz%49c&iq'
+SECRET_KEY = 'django-insecure-f+6prd*q=e05(b%_$fdd&lp!=ib6!zo*)&)r-g0p=fz%49c&iq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -103,7 +106,7 @@ WSGI_APPLICATION = 'torbah.wsgi.application'
 
 import dj_database_url
 DATABASES = {
-    'default': dj_database_url.parse(env('DATABASE_URL'))
+    'default': dj_database_url.parse(DATABASE_URL)
 }
 
 # Password validation
