@@ -28,7 +28,7 @@ DATABASE_URL = os.environ.get('DATABASE_URL')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
-
+SECRET_KEY = django-insecure-f+6prd*q=e05(b%_$fdd&lp!=ib6!zo*)&)r-g0p=fz%49c&iq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
